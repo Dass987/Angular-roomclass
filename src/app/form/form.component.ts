@@ -5,6 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './form.component.html',
   styleUrls: ['./form.component.css']
 })
+
 export class FormComponent implements OnInit {
 
 	users: string[] = ['Ryan', 'Joe', 'Cameron'];
@@ -23,7 +24,11 @@ export class FormComponent implements OnInit {
 	}
 
 	addUser(newUser) {
-		console.log(newUser);
+		if (newUser.value != '') {
+			this.users.push(newUser.value);
+			newUser.value = '';
+			newUser.focus();
+		}
 		return false;
 	}
 

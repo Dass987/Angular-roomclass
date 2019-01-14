@@ -1,0 +1,19 @@
+form {
+	margin: 20px auto;
+	border: 1px solid #e0e0e0;
+	width: 45%;
+	padding: 20px 0;
+}
+
+.mat-stroked-button, .mat-form-field {
+	margin: auto;
+	display: block;
+}
+
+.mat-stroked-button {
+	padding: 3px 40px;
+}
+
+.mat-form-field {
+	width: 40%;
+}

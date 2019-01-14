@@ -2,14 +2,14 @@
 	<mat-grid-tile></mat-grid-tile>
 	<mat-grid-tile>
 		<div class="example-container">
-			<h1>Add new</h1>
+			<h1>Add new user</h1>
 			<br>
-			<form class="example-form" (submit)="addUser(newUser.value)">
+			<form class="example-form" (submit)="addUser(newUser)">
 				<mat-form-field>
-					<input matInput placeholder="Input" #newUser>
+					<input matInput placeholder="Name user" #newUser>
 				</mat-form-field>
 				<br>
-				<mat-form-field>
+				<!--<mat-form-field>
 						<input matInput placeholder="Input">
 				</mat-form-field>
 				<br>
@@ -19,11 +19,19 @@
 						<mat-option value="option">Option</mat-option>
 						<mat-option value="option">Option</mat-option>
 					</mat-select>
-				</mat-form-field>
+				</mat-form-field>-->
 				<br>
   			<button mat-stroked-button color="primary">Save</button>
 			</form>
 		</div>
 	</mat-grid-tile>
-	<mat-grid-tile></mat-grid-tile>
+	<mat-grid-tile>
+		<mat-list role="list">
+			<mat-list-item role="listitem" *ngFor="let user of users">
+				{{ user }}
+				<mat-divider></mat-divider>
+			</mat-list-item>
+		</mat-list>
+	</mat-grid-tile>
+
 </mat-grid-list>

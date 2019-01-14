@@ -1,0 +1,8 @@
+<mat-list>
+	<h3 mat-subheader>Notes</h3>
+	<mat-list-item *ngFor="let post of posts">
+		<mat-icon mat-list-icon>notes</mat-icon>
+		<h4 mat-line>{{post.title}}</h4>
+		<p mat-line> {{post.body}} </p>
+	</mat-list-item>
+</mat-list>
