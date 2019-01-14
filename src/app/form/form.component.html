@@ -1,0 +1,29 @@
+<mat-grid-list cols="3" rowHeight="1:1">
+	<mat-grid-tile></mat-grid-tile>
+	<mat-grid-tile>
+		<div class="example-container">
+			<h1>Add new</h1>
+			<br>
+			<form class="example-form" (submit)="addUser(newUser.value)">
+				<mat-form-field>
+					<input matInput placeholder="Input" #newUser>
+				</mat-form-field>
+				<br>
+				<mat-form-field>
+						<input matInput placeholder="Input">
+				</mat-form-field>
+				<br>
+				<mat-form-field>
+					<mat-select placeholder="Select">
+						<mat-option value="option">Option</mat-option>
+						<mat-option value="option">Option</mat-option>
+						<mat-option value="option">Option</mat-option>
+					</mat-select>
+				</mat-form-field>
+				<br>
+  			<button mat-stroked-button color="primary">Save</button>
+			</form>
+		</div>
+	</mat-grid-tile>
+	<mat-grid-tile></mat-grid-tile>
+</mat-grid-list>

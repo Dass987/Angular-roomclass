@@ -1,0 +1,32 @@
+<!--<ul>
+	<li *ngFor="let user of users">{{ user }}</li>
+</ul>-->
+
+<h1 class="mat-h1">{{ title }}</h1>
+
+<mat-divider></mat-divider>
+
+<!--<mat-selection-list #shoes *ngIf="activated">
+	<app-user *ngFor="let user of users" [nameUser]="user"></app-user>
+</mat-selection-list>-->
+
+<br>
+
+<mat-grid-list cols="2" rowHeight="6:1">
+	<mat-grid-tile><b>Name: </b>&nbsp;{{ name.split(' ')[0] }}</mat-grid-tile>
+	<mat-grid-tile><b>Last name: </b>&nbsp;{{ name.split(' ')[1] }}</mat-grid-tile>
+	<mat-grid-tile><b>Age: </b>&nbsp;{{ age }}</mat-grid-tile>
+	<mat-grid-tile><b>City: </b>&nbsp;{{ address.city }}</mat-grid-tile>
+	<mat-grid-tile><b>Street: </b>&nbsp;{{ address.street }}</mat-grid-tile>
+	<mat-grid-tile><b>Active: </b>&nbsp;{{ activated ? 'Yes' : 'No' }}</mat-grid-tile>
+</mat-grid-list>
+
+<br>
+<mat-divider></mat-divider>
+<h1 class="mat-h1">{{name.split(' ')[0]}}'s hobbies</h1>
+<br>
+
+<mat-list>
+	<mat-list-item *ngFor="let hobby of hobbies">{{ hobby }}</mat-list-item>
+	<mat-divider></mat-divider>
+</mat-list>
